@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --LightRed: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --OffWhite: hsl(0, 0%, 94%);
+    --LightGrey: hsl(0, 0%, 86%);
+    --SmokeyGrey: hsl(0, 1%, 44%);
+    --OffBlack: hsl(0, 0%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: var(--OffWhite);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Caixa*/
+
+.caixa{
+    background-color: #fff;
+    width: 50%;
+    padding: 30px 50px;
+    border-radius: 10px;
+    border-bottom-right-radius: 100px;
+}
+
+.caixa #caixa-forms{
+    border-bottom: 2px solid var(--LightGrey);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.caixa #caixa-forms form{
+    display: flex;
+    width: 80%;
+}
+
+.caixa #caixa-forms form .form-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 10px 10px 0;
+}
+
+.caixa #caixa-forms form .form-group label{
+    color: var(--SmokeyGrey);
+    letter-spacing: 5px;
+}
+
+.caixa #caixa-forms form .form-group input{
+    border: none;
+    outline: none;
+    width: 80%;
+    font-size: 32px;
+    padding: 5px 13px;
+    margin: 7px 0 0px 0;
+    font-weight: 800;
+    border: 1px solid var(--LightGrey);
+    border-radius: 5px;
+}
+
+.caixa #caixa-forms form .form-group input:focus{
+    border: 1px solid var(--Purple);
+}
+
+.caixa #caixa-forms form .form-group input::placeholder{
+    color: var(--LightGrey);
+}
+
+.caixa #caixa-forms form .form-group input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.caixa #caixa-forms form .form-group #area-erro{
+    height: 10px;
+    margin-bottom: 30px;
+}
+
+/*Classe erros*/
+label.errado{
+    color: var(--LightRed) !important;
+}
+
+
+span.errado{
+    font-weight: 400;
+    font-style: italic;
+    color: var(--LightRed);
+    font-size: 0.8em;
+}
+
+input.errado{
+    border: 1px solid var(--LightRed) !important;
+}
+
+/*Botão*/
+
+.caixa #caixa-forms button{
+    background-color: var(--Purple);
+    border: none;
+    border-radius: 100px;
+    padding: 20px;
+    position: absolute;
+    bottom: -40px;
+    right: 0px;
+    transition: background-color 0.1s ease-in;
+}
+
+.caixa #caixa-forms button:hover{
+    background-color: var(--OffBlack);
+}
+
+.caixa #caixa-forms button:active{
+    background-color: var(--Purple);
+}
+
+/*Datas*/
+
+.caixa #caixa-datas h1{
+    font-size: 4em;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.caixa #caixa-datas h1 span{
+    color: var(--Purple);
+}
+
+
+@media (max-width: 768px) {
+    .caixa{
+        width: 90%;
+        padding: 15px 10px;
+    }
+
+    .caixa #caixa-forms form{
+        width: 100%;
+    }
+
+    .caixa #caixa-forms form .form-group input{
+        font-size: 25px;
+        width: 90%;
+        padding: 5px 4px;
+    }
+
+
+    .caixa #caixa-forms button{
+        padding: 12px;
+        right: 40%;    
+    }
+
+    .caixa #caixa-datas h1{
+        font-size: 3em;
+    }
+}

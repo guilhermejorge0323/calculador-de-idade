@@ -1,0 +1,19 @@
+Fases:
+
+	1 <- Montar Html e CSS para desktop (X)
+	
+	2 <- Montar o responsivo (X)
+
+	3 <- fazer javascript 
+
+
+
+Necessidades:
+
+	- Na area dos formularios deve ter uma area para erros
+
+	- Formularios devem ser tratados em javascript
+
+	- Formulario quando ativo deve ter borda roxa
+
+	- FOrmulario quando der erro deve exibir mensagem no formulario que deu erro

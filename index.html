@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculador de idade</title>
+</head>
+<body>
+
+  <div class="caixa">
+      <section id="caixa-forms">
+            <form action="">
+                <div class="form-group">
+                    <label id="labelDia" for="dia">Dia</label>
+                    <input type="number" id="input-dia" placeholder="DD" maxlength="2">
+                    <div id="area-erro"><span id="erroDia" class="errado"></span></div>
+                </div>
+
+                <div class="form-group">
+                  <label id="labelMes" for="mes">mes</label>
+                  <input type="number" id="input-mes" placeholder="MM" maxlength="2">
+                  <div id="area-erro"><span id="erroMes" class="errado"></span></div>
+                  
+                </div>
+
+                <div class="form-group">
+                  <label id="labelAno" for="ano">Ano</label>
+                  <input type="number" id="input-ano" placeholder="YYYY" maxlength="4">
+                  <div id="area-erro"><span id="erroAno" class="errado"></span></div>
+                </div>
+            </form>
+            <button id="btn-calcular"><img src="assets/images/icon-arrow.svg"></button>
+      </section>
+
+      <section id="caixa-datas">
+          <h1><span id="ano">- -</span> Anos</h1>
+          <h1><span id="mes">- -</span> Meses</h1>
+          <h1><span id="dia">- -</span> Dias</h1>
+      </section>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
