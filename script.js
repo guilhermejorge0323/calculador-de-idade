@@ -94,6 +94,7 @@ function verificaDia(){
 
 
 function verificaMes(){
+    const data = new Date();
     if(!inptMes.value){
         lancaErro(inptMes);
         lancaErro(labelMes);
@@ -113,15 +114,20 @@ function verificaMes(){
 
 
 function verificaAno(){
+    const data = new Date();
+    const dataAniverssario = new Date(`${inptAno.value}-${inptMes.value}-${inptDia.value}`);
     if(!inptAno.value){
         lancaErro(inptAno);
         lancaErro(labelAno);
         erroAno.innerText = 'Invalido!'
         return false;
-    }else if(Number(inptAno.value) < 1905 || Number(inptAno.value) > 2099){
+    }else if(Number(inptAno.value) < 1905 || Number(inptAno.value) > data.getFullYear()){
         lancaErro(inptAno);
         lancaErro(labelAno);
         erroAno.innerText = 'Invalido!'
+        return false;
+    }else if(dataAniverssario > data){
+        alert('Invalido!');
         return false;
     }else{
         inptAno.classList = '';
